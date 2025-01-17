@@ -13,6 +13,18 @@ document.getElementById("downloadButton").addEventListener("click", function () 
     link.click();
   });
 
+document.querySelectorAll(".downloadButton").forEach(button => {
+  button.addEventListener("click", function () {
+    const filePath = this.getAttribute("data-file");
+    const fileName = this.getAttribute("data-name");
+
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = fileName;
+    link.click();
+  });
+});
+
 document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault(); //verhindert seitenreload
   
@@ -31,5 +43,16 @@ document.getElementById("contactForm").addEventListener("submit", function (even
       formMessage.style.color = "red";
     }
   });
-  
+
+  document.querySelectorAll(".downloadButton").forEach(button => {
+  button.addEventListener("click", function () {
+    const filePath = this.getAttribute("data-file");
+    const fileName = this.getAttribute("data-name");
+
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = fileName;
+    link.click();
+  });
+});
   

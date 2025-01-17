@@ -23,6 +23,52 @@
     <br>
     <button id="downloadButton">Audio download</button>
   </div>
+
+  <h2>Unsere Plakate</h2>
+    <div class="posters">
+      <div class="poster">
+        <img src="images/plakat1.png" alt="Plakat 1" class="clickable">
+        <button class="downloadButton" data-file="images/plakat1.png" data-name="plakat1.png">Plakat 1 download</button>
+      </div>
+      <div class="poster">
+        <img src="images/plakat2.png" alt="Plakat 2" class="clickable">
+        <button class="downloadButton" data-file="images/plakat2.png" data-name="plakat2.png">Plakat 2 download</button>
+      </div>
+      <div class="poster">
+        <img src="images/plakat3.png" alt="Plakat 3" class="clickable">
+        <button class="downloadButton" data-file="images/plakat3.png" data-name="plakat3.png">Plakat 3 download</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="hidden">
+    <span id="closeModal">&times;</span>
+    <img id="modalImage" alt="Plakat Vollbild">
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll(".clickable").forEach(img => {
+      img.addEventListener("click", function () {
+        console.log("Image clicked: ", this.src);
+        modal.style.display = "flex";
+        modalImage.src = this.src;
+      });
+    });
+
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
