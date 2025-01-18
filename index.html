@@ -1,23 +1,62 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Startseite</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Own a Piece of Mars</title>
+  <link rel="stylesheet" href="css/index_style.css">
 </head>
 <body>
-  <nav>
-    <ul class="navbar">
-      <li><a class="active" href="index.html">Startseite</a></li>
-      <li><a href="about.html">Über uns</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
-    </ul>
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Startseite</a>
+    <a href="about.html" class="nav-link">Über uns</a>
+    <div class="logo-container">
+      <img src="images/Logo_mid.png" alt="Orbital City Logo" class="logo">
+    </div>
+    <a href="products.html" class="nav-link">Produkte</a>
+    <a href="contact.html" class="nav-link">Kontakt</a>
   </nav>
-  <div class="hero">
-    <h1>Willkommen!</h1>
-    <p>Erfahren Sie mehr über Orbital City und unsere Arbeit.</p>
+</header>
+<div >
+  <div class="content">
+    <img class="galaxy-container" src="images/test.svg" id="city_view" alt="city view">
   </div>
-  <script src="script.js"></script>
+</div>
+
+<section>
+  <div class="products-container">
+    <h1>Wählen Ihre neue
+      Lieblingsaussicht</h1>
+  </div>
+  <div id="slider">
+    <input type="radio" name="slider" id="s1" checked />
+    <input type="radio" name="slider" id="s2" />
+    <input type="radio" name="slider" id="s3" />
+    <input type="radio" name="slider" id="s4" />
+    <input type="radio" name="slider" id="s5" />
+    <label for="s1" id="slide1">
+      <img src="images/roundel_group_1.svg" alt="roundel-item">
+    </label>
+    <label for="s2" id="slide2">
+      <img src="images/roundel_group_2.svg" alt="roundel-item">
+    </label>
+    <label for="s3" id="slide3">
+      <img src="images/roundel_group_3.svg" alt="roundel-item">
+    </label>
+    <label for="s4" id="slide4">
+      <img src="images/roundel_group_3.svg" alt="roundel-item">
+    </label>
+    <label for="s5" id="slide5">
+      <img src="images/roundel_group_3.svg" alt="roundel-item">
+    </label>
+  </div>
+  <h4 class="white-spacer">.</h4>
+</section>
+<div >
+  <a href="products.html"><img class="galaxy-container" src="images/Group_element.svg"></a>
+</div>
+
+<script src="js/index.js"></script>
 </body>
 </html>
