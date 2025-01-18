@@ -42,13 +42,15 @@ class ProductList {
             const propertyDiv = document.createElement('div');
             propertyDiv.className = 'property';
 
+            const propertyImage = document.createElement('div');
+            propertyImage.className = 'property-image';
+            propertyDiv.appendChild(propertyImage);
+
             const propertyDetails = document.createElement('div');
             propertyDetails.className = 'property-details';
             propertyDiv.appendChild(propertyDetails);
 
-            const propertyImage = document.createElement('div');
-            propertyImage.className = 'property-image';
-            propertyDiv.appendChild(propertyImage);
+
 
             // Name
             const nameElement = document.createElement('h2');
@@ -167,6 +169,19 @@ function loadProperties() {
             console.error('Fehler beim Laden der JSON-Datei:', error);
         });
 }
+// Optionale Animation beim Laden
+document.addEventListener("DOMContentLoaded", () => {
+    const properties = document.querySelectorAll(".property");
+    properties.forEach((property, index) => {
+        property.style.opacity = "0";
+        property.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            property.style.transition = "all 0.5s ease";
+            property.style.opacity = "1";
+            property.style.transform = "translateY(0)";
+        }, index * 100); // gestaffelter Effekt
+    });
+});
 
 // Beim Laden der Seite die JSON-Daten laden
 window.onload = () => {

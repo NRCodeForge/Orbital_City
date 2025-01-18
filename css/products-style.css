@@ -42,54 +42,156 @@
     max-width: 100%;
 }
 
-/*Product Styling*/
-.property{
+/* Container für Produktkarten */
+#products-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: red;
-    border-radius: 250px;
-    margin: 20px 15px;
+    flex-wrap: wrap; /* Ermöglicht Zeilenumbruch bei kleineren Bildschirmen */
+    gap: 20px; /* Abstand zwischen den Karten */
+    justify-content: center; /* Zentriere Karten horizontal */
+    padding: 20px;
 }
-.property-details{
-    color: white;
+
+/* Jede Produktkarte */
+.property {
+    flex: 1 1 calc(33.333% - 20px); /* 1/3 Breite, berücksichtigt den Abstand */
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: calc(33.333% - 20px); /* Maximale Breite */
 }
-.property-details p{
-    font-size: 18pt;
+
+.property:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.property-details h2{
-    font-size: 44pt;
+
+/* Bild in der Karte */
+.property-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
-.property-image img{
-    height: 350px;
-    width: 450px;
-    border-radius: 10000px;
-    border: 5px solid #ff6600;
-    object-fit: cover;
+
+.property:hover .property-image img {
+    transform: scale(1.05);
 }
+
+/* Details in der Karte */
+.property-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.property-details h2 {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.property-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.property-details p:last-child {
+    margin-top: 10px;
+    color: #888;
+    font-style: italic;
+}
+
+.property-details p:nth-child(4) {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .property {
+        flex: 1 1 calc(50% - 20px); /* 2 Karten nebeneinander auf kleineren Bildschirmen */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .property {
+        flex: 1 1 100%; /* Eine Karte pro Zeile auf sehr kleinen Bildschirmen */
+        max-width: 100%;
+    }
+}
+
 /*product container styling*/
 .container{
-
-    margin: 60px;
+    margin: 40px;
     padding: 20px;
-    border-radius: 200px;
+    border-radius: 50px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 
 }
-#products-container{
-    padding: 20px;
-}
-.filter{
-    margin-top: 40px;
-    margin-left: 40px;
-    background: #ff6600;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
 
+/* Filter-Container */
+.filter {
+    display: flex;
+    flex-wrap: wrap; /* Zeilenumbruch bei kleineren Bildschirmen */
+    gap: 10px; /* Abstand zwischen den Filtern */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Abstand zu den Produktkarten */
+}
+
+/* Select- und Input-Felder */
+.filter select,
+.filter input {
+    flex: 1 1 200px; /* Basisbreite */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter select:focus,
+.filter input:focus {
+    border-color: #4CAF50; /* Grün passend zu den Produktkarten */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/* Filter-Button */
+.filter button {
+    padding: 10px 20px;
+    background: #4CAF50; /* Grün passend zu den Karten */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter button:hover {
+    background: #45a049; /* Etwas dunkler beim Hover */
+    transform: translateY(-2px); /* Leichter "Button-Hover" */
+}
+
+.filter button:active {
+    background: #3e8e41; /* Dunkler bei Klick */
+    transform: translateY(0);
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .filter select,
+    .filter input,
+    .filter button {
+        flex: 1 1 100%; /* Volle Breite bei kleineren Bildschirmen */
+        margin-bottom: 10px;
+    }
 }
