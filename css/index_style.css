@@ -1,7 +1,8 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
+
 /* Header-Styling */
 .header {
     background-color: #fff;
@@ -45,6 +46,7 @@ body{
     height: 80px; /* Höhe des Logos */
     max-width: 100%;
 }
+
 /* Mars-Banner */
 .mars-banner {
     position: relative;
@@ -73,20 +75,18 @@ body{
     background: rgba(0, 0, 0, 0.6); /* Halbtransparenter schwarzer Hintergrund */
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-
     color: #fff;
 }
 
-
 .city-image {
-    width: 150%; /* 1,5 mal größer */
+    width: 110%; /* 1,1 mal größer */
     max-width: none; /* Entfernt Begrenzung der maximalen Breite */
     height: auto;
-    border-radius: 10px;
+    border-radius: 50%; /* Abnormale, runde Form */
     margin-bottom: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Abnormale Form (dreieckig) */
 }
-
 
 h1 {
     font-size: 2rem;
@@ -110,10 +110,12 @@ h1 {
         max-width: 100%;
     }
 }
-.galaxy-container{
+
+.galaxy-container {
     width: 100%;
 }
-.products-container{
+
+.products-container {
     height: 500px;
     text-align: center;
     display: flex;
@@ -121,11 +123,13 @@ h1 {
     align-items: center;
     font-size: 40pt;
 }
-.products-container h1{
+
+.products-container h1 {
     align-self: center;
     width: 900px;
 }
-#slider{
+
+#slider {
     position: relative;
     width: 50%;
     height: 32vw;
@@ -133,7 +137,8 @@ h1 {
     transform-style: preserve-3d;
     perspective: 1400px;
 }
-input[ type="radio"]{
+
+input[type="radio"] {
     position: relative;
     top: 100%;
     left: 50%;
@@ -144,14 +149,17 @@ input[ type="radio"]{
     cursor: pointer;
     opacity: 0.4;
 }
-input[ type="radio"]:nth-child(5){
-    margin-right: 0px ;
+
+input[type="radio"]:nth-child(5) {
+    margin-right: 0px;
 }
-input[ type="radio"]:checked{
+
+input[type="radio"]:checked {
     opacity: 1;
 }
+
 #slider label,
-#slider label img{
+#slider label img {
     display: flex;
     position: absolute;
     top: 0;
@@ -167,52 +175,58 @@ input[ type="radio"]:checked{
     transition: transform 0.4s ease;
 }
 
-/* Activ Slide*/
+/* Activ Slide */
 #s1:checked ~ #slide1,
 #s2:checked ~ #slide2,
 #s3:checked ~ #slide3,
 #s4:checked ~ #slide4,
-#s5:checked ~ #slide5{
-    transform: translate3d(0%, 0 , 0px);
-
+#s5:checked ~ #slide5 {
+    transform: translate3d(0%, 0, 0px);
 }
-/* Next Slide*/
+
+/* Next Slide */
 #s1:checked ~ #slide2,
 #s2:checked ~ #slide3,
 #s3:checked ~ #slide4,
 #s4:checked ~ #slide5,
-#s5:checked ~ #slide1{
-    transform: translate3d(40%, -150px , -100px);
-
+#s5:checked ~ #slide1 {
+    transform: translate3d(30%, -120px, -80px); /* 0,75 der ursprünglichen Größe */
 }
-/*previous slide */
+
+/* Previous slide */
 #s2:checked ~ #slide1,
 #s3:checked ~ #slide2,
 #s4:checked ~ #slide3,
 #s5:checked ~ #slide4,
-#s1:checked ~ #slide5{
-    transform: translate3d(-40%, -150px , -100px);
-
+#s1:checked ~ #slide5 {
+    transform: translate3d(-30%, -120px, -80px); /* 0,75 der ursprünglichen Größe */
 }
-/*next to next slide*/
+
+/* Next to next slide */
 #s1:checked ~ #slide3,
 #s2:checked ~ #slide4,
 #s3:checked ~ #slide5,
 #s4:checked ~ #slide1,
-#s5:checked ~ #slide2{
-    transform: translate3d(80%, -300px , -250px);
-
+#s5:checked ~ #slide2 {
+    transform: translate3d(60%, -240px, -200px); /* 0,75 der ursprünglichen Größe */
 }
-/*previous to previous slide*/
+
+/* Previous to previous slide */
 #s1:checked ~ #slide4,
 #s2:checked ~ #slide5,
 #s3:checked ~ #slide1,
 #s4:checked ~ #slide2,
-#s5:checked ~ #slide3{
-    transform: translate3d(-80%, -300px , -250px);
-
+#s5:checked ~ #slide3 {
+    transform: translate3d(-60%, -240px, -200px); /* 0,75 der ursprünglichen Größe */
 }
-.white-spacer{
+
+/* Bilder in den Slides */
+#slider label img {
+    clip-path: ellipse(50% 70% at 50% 50%); /* Abnormale Form (ellipse) */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Box Shadow hinzufügen */
+}
+
+.white-spacer {
     width: 100%;
     height: 30px;
     background-color: white;
