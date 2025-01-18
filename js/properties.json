@@ -2,14 +2,14 @@
   "properties": [
     {
       "id": "1",
-      "name": "Odniss zur Westlichen Seite",
-      "type": "Industrie",
+      "name": "Apartment im Industriegebiet",
+      "type": "Private Nutzung",
       "location": "Orbital City",
-      "sizeInSquareMeters": 8500,
-      "priceInEuros": 2500000,
-      "description": "Ein schönes Grundstück am rande der Orbital City.",
+      "sizeInSquareMeters": 250,
+      "priceInEuros": 250000.00,
+      "description": "Wir befinden uns am Gipfel im Industriegebiet, ein Apartment mit Blick in die Industriestädte im Norden der Orbital City.",
       "image": {
-        "src": "images/industrie_02.png",
+        "src": "images/industrie_01.jpg",
         "alt": "Blick vom Grundstück"
       }
     },
@@ -19,8 +19,8 @@
       "type": "Private Nutzung",
       "location": "Obital City",
       "sizeInSquareMeters": 120,
-      "priceInEuros": 250000,
-      "description": "Eine Apartment Wohnung mitten in der Obital City.",
+      "priceInEuros": 300000.00,
+      "description": "Eine Apartment Wohnung mitten in der Obital City, mit einem Wunderschönen Blick über die Stadt.",
       "image": {
         "src": "images/city_01.png",
         "alt": "Blick vom Grundstück"
@@ -28,27 +28,27 @@
     },
     {
       "id": "3",
-      "name": "Odniss zur Nördlichen Seite",
+      "name": "Odniss zur Westlichen Seite",
       "type": "Industrie",
       "location": "Obital City",
       "sizeInSquareMeters": 4500,
-      "priceInEuros": 1900000,
-      "description": "Ein schönes Grundstück am rande der Orbital City.",
+      "priceInEuros": 1900000.00,
+      "description": "Ein schönes Grundstück am Rande der Orbital City, verwendbar für ihre Industrie.",
       "image": {
-        "src": "images/industrie_01.jpg",
+        "src": "images/industrie_02.png",
         "alt": "Blick vom Grundstück"
       }
     },
     {
       "id": "4",
-      "name": "Odniss zur Westlichen Seite",
+      "name": "Odniss zur Südlichen Seite",
       "type": "Industrie",
       "location": "Orbital City",
       "sizeInSquareMeters": 8500,
       "priceInEuros": 2500000,
-      "description": "Ein schönes Grundstück am rande der Orbital City.",
+      "description": "Ein schönes Grundstück am Rande der Orbital City, verwendbar für ihre Industrie.",
       "image": {
-        "src": "images/industrie_02.png",
+        "src": "images/industrie_03.jpeg",
         "alt": "Blick vom Grundstück"
       }
     },
@@ -58,23 +58,36 @@
       "type": "Private Nutzung",
       "location": "Obital City",
       "sizeInSquareMeters": 120,
-      "priceInEuros": 250000,
-      "description": "Eine Apartment Wohnung mitten in der Obital City.",
+      "priceInEuros": 300000.00,
+      "description": "Eine Apartment Wohnung in der Obital City westlich der Stadt-Mitte, mit einem Wunderschönen Blick über die Stadt.",
       "image": {
-        "src": "images/city_01.png",
+        "src": "images/city_02.png",
         "alt": "Blick vom Grundstück"
       }
     },
     {
       "id": "6",
-      "name": "Odniss zur Nördlichen Seite",
+      "name": "Odniss zur Östlichen Seite",
       "type": "Industrie",
       "location": "Obital City",
-      "sizeInSquareMeters": 4500,
-      "priceInEuros": 1900000,
-      "description": "Ein schönes Grundstück am rande der Orbital City.",
+      "sizeInSquareMeters": 45000,
+      "priceInEuros": 30000000.00,
+      "description": "Ein schönes Grundstück am Rande der Orbital City, verwendbar für ihre Industrie.",
       "image": {
-        "src": "images/industrie_01.jpg",
+        "src": "images/industrie_04.jpeg",
+        "alt": "Blick vom Grundstück"
+      }
+    },
+    {
+      "id": "7",
+      "name": "Odniss zur Süd-Östlichen Seite",
+      "type": "Industrie",
+      "location": "Obital City",
+      "sizeInSquareMeters": 45000,
+      "priceInEuros": 30500000.00,
+      "description": "Ein schönes Grundstück am Rande der Orbital City, verwendbar für ihre Industrie.",
+      "image": {
+        "src": "images/industrie_05.jpeg",
         "alt": "Blick vom Grundstück"
       }
     }
