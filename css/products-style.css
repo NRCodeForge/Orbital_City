@@ -1,0 +1,95 @@
+/* Header-Styling */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation innerhalb des Headers */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Links (Startseite, Über uns, etc.) */
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 35pt;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6600; /* Hover-Farbe */
+}
+
+/* Logo-Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 80px; /* Höhe des Logos */
+    max-width: 100%;
+}
+
+/*Product Styling*/
+.property{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: red;
+    border-radius: 250px;
+    margin: 20px 15px;
+}
+.property-details{
+    color: white;
+}
+.property-details p{
+    font-size: 18pt;
+}
+.property-details h2{
+    font-size: 44pt;
+}
+.property-image img{
+    height: 350px;
+    width: 450px;
+    border-radius: 10000px;
+    border: 5px solid #ff6600;
+    object-fit: cover;
+}
+/*product container styling*/
+.container{
+
+    margin: 60px;
+    padding: 20px;
+    border-radius: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+}
+#products-container{
+    padding: 20px;
+}
+.filter{
+    margin-top: 40px;
+    margin-left: 40px;
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+
+}
