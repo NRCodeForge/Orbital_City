@@ -195,3 +195,35 @@
         margin-bottom: 10px;
     }
 }
+/* Banner-Styling */
+.cta-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #4CAF50, #2E7D32); /* Grüner Farbverlauf */
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    margin: 20px 0; /* Abstand zwischen Navbar und Header */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Link-Styling */
+.cta-banner a {
+    color: #FFEB3B; /* Gelber Akzent für den Link */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid transparent; /* Rahmen für Hover-Effekt */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-banner a:hover {
+    background: #fff; /* Weißer Hintergrund beim Hover */
+    color: #2E7D32; /* Passende grüne Schrift */
+    border-color: #FFEB3B; /* Gelber Rahmen */
+    text-decoration: none;
+}
