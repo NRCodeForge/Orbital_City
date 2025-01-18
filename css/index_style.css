@@ -45,6 +45,71 @@ body{
     height: 80px; /* Höhe des Logos */
     max-width: 100%;
 }
+/* Mars-Banner */
+.mars-banner {
+    position: relative;
+    height: 100vh; /* Vollbildhöhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Passt das Bild an die Größe an */
+    z-index: -1; /* Legt das Bild hinter den Inhalt */
+}
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Halbtransparenter schwarzer Hintergrund */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+    color: #fff;
+}
+
+
+.city-image {
+    width: 150%; /* 1,5 mal größer */
+    max-width: none; /* Entfernt Begrenzung der maximalen Breite */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .mars-banner {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .city-image {
+        max-width: 100%;
+    }
+}
 .galaxy-container{
     width: 100%;
 }
