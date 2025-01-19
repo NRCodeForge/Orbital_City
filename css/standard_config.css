@@ -112,3 +112,75 @@ footer p {
         font-size: 0.8rem; /* Noch kleinere Schrift auf mobilen Geräten */
     }
 }
+
+/* Generelle Größenbeschränkungen für Bilder */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Für alle Clickable-Bilder (z. B. Plakate) */
+.clickable {
+    max-width: 300px; /* Beschränke die Breite der Plakate */
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.clickable:hover {
+    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+}
+
+/* Buttons für Plakat-Downloads */
+.downloadButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+    background-color: #cc5200;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.modal span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal span:hover {
+    color: #ff6600;
+}

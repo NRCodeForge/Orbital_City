@@ -4,32 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontaktformular</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/standard_config.css">
+  <link rel="stylesheet" href="css/contact_style.css">
 </head>
 <body>
-  <nav>
-    <ul class="navbar">
-      <li><a href="index.html">Startseite</a></li>
-      <li><a href="about.html">Über uns</a></li>
-      <li><a class="active" href="contact.html">Kontakt</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <h1>Kontaktformular</h1>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">Über uns</a>
+      <div class="logo-container">
+        <img src="images/Logo_mid.png" alt="Orbital City Logo" class="logo">
+      </div>
+      <a href="products.html" class="nav-link">Produkte</a>
+      <a href="contact.html" class="nav-link">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- Kontaktformular -->
+  <div class="contact-container">
+    <h1>Kontaktieren Sie uns</h1>
+    <p class="contact-description">Haben Sie Fragen? Schreiben Sie uns gerne über dieses Formular!</p>
     <form id="contactForm">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" placeholder="Ihr Name" required>
 
       <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
 
       <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
 
       <button type="submit">Absenden</button>
     </form>
     <p id="formMessage" class="hidden"></p>
   </div>
-  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="products.html">Produkte</a>
+        <a href="about.html">Über uns</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+      <p>&copy; 2025 Ihr Mars-Immobilienanbieter | Alle Rechte vorbehalten</p>
+    </div>
+  </footer>
 </body>
 </html>

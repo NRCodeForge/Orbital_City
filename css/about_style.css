@@ -1,0 +1,300 @@
+/* Titelbereich */
+.about-section h1 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Abschnittsüberschriften */
+.about-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+/* Allgemeiner Container */
+.about-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Media-Sektion */
+.media-section h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2rem;
+    color: #ff6600;
+}
+
+.media-section .posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.media-section .poster {
+    text-align: center;
+    max-width: 300px;
+}
+
+.media-section .poster img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Audio-Bereich */
+#downloadAudio {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadAudio:hover {
+    background-color: #cc5200;
+}
+
+/* About Main Area */
+.about-area {
+    display: flex;
+   background: linear-gradient(to right, #ff7e5f, #feb47b);  /*Sanfter Verlauf von Orange zu Gelb */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 30px; /* Abgerundete Ecken für ein weicheres Aussehen */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Weicher Schatten für mehr Tiefe */
+    margin: 0 auto;
+    max-width: 1200px; /* Begrenze die Breite der about Area */
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* Weißer Text für den Kontrast */
+    position: relative;
+}
+
+.about-area h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Schatten für den Text */
+    line-height: 1.3;
+}
+
+.about-area p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-area img {
+    width: 100%;
+    height: 110vh;
+    border-radius: 20px; /* Abgerundete Ecken für das Bild */
+    max-width: 1100px;
+    margin-top: 0; /* Entfernt den oberen Abstand */
+}
+
+/* Container für den Textbereich */
+.about-content {
+    max-width: 600px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.about-content h1,
+.about-content h2,
+.about-content p {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s forwards;
+}
+
+.about-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation-delay: 0.3s;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    animation-delay: 0.6s;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 1.8;
+    animation-delay: 0.9s;
+}
+
+/* Stil für das Bild auf der rechten Seite */
+.about-image {
+    max-width: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0; /* Positioniert das Bild oben */
+    height: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    animation: slideIn 1.5s forwards 0.5s; /* Animation für das Bild */
+}
+
+/* Fade-In-Animation für Text */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-In-Animation für das Bild */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsives Design für about Area */
+@media (max-width: 768px) {
+    .about-area {
+        flex-direction: column;
+        height: auto; /* Höhe der about Area passt sich an den Inhalt an */
+        padding: 40px 20px;
+    }
+
+    .about-area h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-area p {
+        font-size: 1rem;
+    }
+
+    .about-area img {
+        height: 60vh; /* Reduziert die Bildhöhe für kleine Bildschirme */
+        max-width: 100%;
+    }
+
+    .about-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    /* Stil für das Bild auf der rechten Seite */
+    .about-image {
+        max-width: 100%;
+        position: relative;
+        height: 60vh; /* Bildhöhe bei kleinen Geräten anpassen */
+        margin-top: 20px;
+    }
+}
+
+/* Container für den Audio-Player */
+.media-container {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto; /* Zentriert den Container */
+    color: #333;
+}
+
+/* Überschrift des Audio-Players */
+.media-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Beschreibung unter der Überschrift */
+.media-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Audio-Player zentrieren */
+#audioPlayer {
+    width: 100%; /* Passt die Breite an den Container an */
+    margin: 20px 0; /* Abstand nach oben und unten */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+}
+
+/* Download-Button */
+#downloadAudio {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#downloadAudio:hover {
+    background-color: #cc5200;
+}
+
+/* Stil für Download-Button */
+.download-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6600; /* Akzentfarbe */
+    color: #fff; /* Weißer Text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Entfernt Standard-Link-Unterstreichung */
+}
+
+.download-button:hover {
+    background-color: #cc5200; /* Etwas dunkler bei Hover */
+    transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
+}
+

@@ -1,0 +1,105 @@
+/* Container für das Kontaktformular */
+.contact-container {
+    background: #fff; /* Weißer Hintergrund */
+    padding: 40px 30px;
+    margin: 40px auto;
+    border-radius: 20px; /* Abgerundete Ecken */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Weicher Schatten */
+    max-width: 800px;
+    text-align: center;
+    color: #333; /* Dunkler Text */
+}
+
+/* Überschrift des Formulars */
+.contact-container h1 {
+    font-size: 2.5rem;
+    color: #ff6600; /* Akzentfarbe */
+    margin-bottom: 10px;
+}
+
+/* Beschreibungstext unter der Überschrift */
+.contact-container .contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555; /* Neutraler Grauton */
+}
+
+/* Formularfelder */
+#contactForm label {
+    font-size: 1.1rem;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Innen-Schatten */
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #aaa; /* Platzhalterfarbe */
+}
+
+#contactForm textarea {
+    resize: none; /* Verhindert Größenänderung */
+}
+
+/* Button-Styling */
+#contactForm button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contactForm button:hover {
+    background-color: #cc5200;
+    transform: translateY(-2px); /* Leichter Hover-Effekt */
+}
+
+#contactForm button:active {
+    transform: translateY(1px);
+}
+
+/* Nachricht nach Absenden */
+#formMessage {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #4caf50; /* Grün für Erfolg */
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-container h1 {
+        font-size: 2rem;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 0.9rem;
+    }
+
+    #contactForm button {
+        font-size: 1rem;
+    }
+}
