@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Own a Piece of Mars</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ihr neues Zuhause auf dem Mars</title>
   <link rel="stylesheet" href="css/index_style.css">
 </head>
 <body>
+
+<!-- Header -->
 <header class="header">
   <nav class="nav">
     <a href="index.html" class="nav-link">Startseite</a>
@@ -18,55 +21,78 @@
     <a href="contact.html" class="nav-link">Kontakt</a>
   </nav>
 </header>
-<section class="mars-banner">
-  <img src="images/galaxy.png" alt="Galaxy Background" class="background-image">
-  <div class="banner-content">
-    <img src="images/city_01.png" alt="City on Mars" class="city-image" />
-    <h1>Erlebe die Zukunft!<br />Ihr neues Zuhause auf dem Mars!</h1>
+
+<!-- Landing Area -->
+<section class="landing-area">
+  <div class="landing-content">
+    <h1>Erlebe die Zukunft!</h1>
+    <h2>Ihr neues Zuhause auf dem Mars</h2>
+    <p>Verpassen Sie nicht die Gelegenheit, ein Teil der Mars-Zukunft zu werden. Entdecken Sie exklusive Grundstücke auf dem Mars und sichern Sie sich Ihr Stück Land in der neuen Ära der Raumfahrt!</p>
   </div>
-</section>
-<section>
-  <div class="products-container">
-    <h1>Wählen Ihre neue
-      Lieblingsaussicht</h1>
+  <div class="landing-image">
+    <img src="images/landing-image.jpg" alt="Mars Image">
   </div>
-  <div id="slider">
-    <input type="radio" name="slider" id="s1" />
-    <input type="radio" name="slider" id="s2" />
-    <input type="radio" name="slider" id="s3" checked />
-    <input type="radio" name="slider" id="s4" />
-    <input type="radio" name="slider" id="s5" />
-    <label for="s1" id="slide1">
-      <img src="images/city_01.png" alt="roundel-item">
-    </label>
-    <label for="s2" id="slide2">
-      <img src="images/industrie_01.jpg" alt="roundel-item">
-    </label>
-    <label for="s3" id="slide3">
-      <img src="images/industrie_02.png" alt="roundel-item">
-    </label>
-    <label for="s4" id="slide4">
-      <img src="images/city_02.png" alt="roundel-item">
-    </label>
-    <label for="s5" id="slide5">
-      <img src="images/industrie_05.jpeg" alt="roundel-item">
-    </label>
-  </div>
-  <h4 class="white-spacer">.</h4>
 </section>
 
+<section id="carousel-section" class="carousel-container">
+  <h2>Unsere Mars-Grundstücke</h2>
+  <div class="carousel">
+    <!-- Dynamische Einfüge-Stelle für Bilder -->
+    <div class="carousel-item" id="carousel-item-1"><img src="images/industrie_01.jpg" alt="Produkt 1"></div>
+    <div class="carousel-item" id="carousel-item-2"><img src="images/city_01.png" alt="Produkt 2"></div>
+    <div class="carousel-item" id="carousel-item-3"><img src="images/industrie_02.png" alt="Produkt 3"></div>
+    <div class="carousel-item" id="carousel-item-4"><img src="images/industrie_03.jpeg" alt="Produkt 4"></div>
+    <div class="carousel-item" id="carousel-item-5"><img src="images/city_02.png" alt="Produkt 5"></div>
+  </div>
+  <div class="cta-container">
+    <a href="Products.html" class="cta-button">Erkunde unsere Produkte</a>
+  </div>
+</section>
+
+<!-- Was wir bieten -->
+<section class="what-we-offer">
+  <div class="container">
+    <h2>Was wir bieten</h2>
+    <div class="offer-cards">
+      <div class="offer-card">
+        <div class="icon-container">
+          <img src="images/icon-vision.png" alt="Vision Icon" class="offer-icon">
+        </div>
+        <h3>Visionäre Grundstücke</h3>
+        <p>Grundstücke, die Ihnen die Möglichkeit geben, Ihre Zukunft auf dem Mars zu gestalten. Verwirklichen Sie Ihre Visionen.</p>
+      </div>
+      <div class="offer-card">
+        <div class="icon-container">
+          <img src="images/icon-view.png" alt="View Icon" class="offer-icon">
+        </div>
+        <h3>Exklusive Aussichtspunkte</h3>
+        <p>Genießen Sie den Blick auf die unendlichen Weiten des Mars und die pulsierende Orbital City direkt von Ihrem Grundstück.</p>
+      </div>
+      <div class="offer-card">
+        <div class="icon-container">
+          <img src="images/icon-building.png" alt="Infrastructure Icon" class="offer-icon">
+        </div>
+        <h3>Moderne Infrastruktur</h3>
+        <p>Unsere Grundstücke bieten alles, was Sie für eine nachhaltige und effiziente Entwicklung benötigen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
   <div class="footer-left">
-    <h1>Entdecken Sie jetzt den Mars!</h1>
-    <h6>Sicheren Sie ihr Grunstück für ihren Zweck.</h6>
+    <h1>Kontaktieren Sie uns</h1>
+    <p>Email: info@marsrealty.com</p>
   </div>
   <div class="footer-center">
-    <img src="images/Logo_Long.png" alt="Langes Logo" class="logo">
+    <p>&copy; 2025 Mars Realty. Alle Rechte vorbehalten.</p>
   </div>
   <div class="footer-right">
-    <h2><a href="products.html" class="button">Lerne nun unsere<br> Produkre kennen &rarr; </a>
-    </h2>
+    <a href="#" class="button">Jetzt kaufen</a>
   </div>
 </footer>
+<a href="https://www.flaticon.com/free-icons/urban" title="urban icons">Urban icons created by Freepik - Flaticon</a>
+<script src="js/landing.js"></script>
 </body>
 </html>
