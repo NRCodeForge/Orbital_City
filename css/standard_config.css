@@ -1,0 +1,114 @@
+/* Allgemeine Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header-Styling */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation innerhalb des Headers */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Links (Startseite, Über uns, etc.) */
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 25pt;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6600; /* Hover-Farbe */
+}
+
+/* Logo-Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 80px; /* Höhe des Logos */
+    max-width: 100%;
+}
+
+
+/* Footer */
+footer {
+    background-color: #2c2c2c; /* Dunkle Farbe für den Hintergrund */
+    color: #fff; /* Weißer Text */
+    padding: 20px 20px; /* Kleinere Abstände */
+    text-align: center;
+    border-top: 3px solid #ff7e5f; /* Dünnere Akzentlinie oben */
+    border-radius: 15px 15px 0 0; /* Abgerundete Ecken oben */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Leichterer Schatten */
+}
+
+/* Footer-Links */
+footer a {
+    color: #fff; /* Weiße Links */
+    text-decoration: none;
+    font-size: 1rem; /* Kleinere Schriftgröße */
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff7e5f; /* Hover-Farbe passend zum Akzent */
+}
+
+/* Footer-Soziale-Icons */
+footer .social-icons {
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    font-size: 1.5rem; /* Kleinere Icons */
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: translateY(-3px); /* Leichterer Hover-Effekt */
+    color: #ff7e5f; /* Akzentfarbe bei Hover */
+}
+
+/* Footer-Bereich für Text */
+footer p {
+    font-size: 0.9rem; /* Kleinere Schriftgröße */
+    margin-top: 15px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Footer-Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 15px; /* Noch kleinere Abstände auf mobilen Geräten */
+    }
+
+    footer .social-icons {
+        margin-top: 15px;
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Noch kleinere Schrift auf mobilen Geräten */
+    }
+}
