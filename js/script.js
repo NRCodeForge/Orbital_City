@@ -1,4 +1,4 @@
-document.getElementById("downloadButton").addEventListener("click", function () {
+document.getElementById("downloadAudio").addEventListener("click", function () {
     
     //audio file path
     const audioPath = "audio/radiospot.mp3";
@@ -11,18 +11,6 @@ document.getElementById("downloadButton").addEventListener("click", function () 
     link.download = "radiospot.mp3";
   
     link.click();
-  });
-
-document.querySelectorAll(".downloadButton").forEach(button => {
-  button.addEventListener("click", function () {
-    const filePath = this.getAttribute("data-file");
-    const fileName = this.getAttribute("data-name");
-
-    const link = document.createElement("a");
-    link.href = filePath;
-    link.download = fileName;
-    link.click();
-  });
 });
 
 document.getElementById("contactForm").addEventListener("submit", function (event) {
@@ -42,17 +30,12 @@ document.getElementById("contactForm").addEventListener("submit", function (even
       formMessage.classList.remove("hidden");
       formMessage.style.color = "red";
     }
-  });
+});
 
-  document.querySelectorAll(".downloadButton").forEach(button => {
-  button.addEventListener("click", function () {
-    const filePath = this.getAttribute("data-file");
-    const fileName = this.getAttribute("data-name");
-
-    const link = document.createElement("a");
-    link.href = filePath;
-    link.download = fileName;
+document.getElementById('downloadPoster').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = 'images/og_plakat.png'; // Pfad zum Plakat
+    link.download = 'Plakat.png'; // Name der heruntergeladenen Datei
     link.click();
-  });
 });
   
